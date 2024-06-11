@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
     if (computerChoice == 0) {
@@ -16,3 +19,4 @@ function getHumanChoice() {
     let humanChoice = prompt("Choose Rock | Paper | Scissors")
     return humanChoice;
 }
+
