@@ -16,8 +16,9 @@ function getHumanChoice() {
     let humanChoice = prompt("Choose Rock | Paper | Scissors")
     return humanChoice;
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+let humanSelection;
+let computerSelection;
 
 let humanScore = 0;
 let computerScore = 0;
@@ -55,5 +56,19 @@ function playRound(humanChoice, computerChoice) {
         console.log("Choose Rock | Paper | Scissors!");
     }
 }
-
-playRound(humanSelection,computerSelection);
+for (let i = 1; i < 5; ++i) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection,computerSelection);
+}
+if (computerScore==humanScore) {
+    console.log("it's a tie!")
+}
+else if (computerScore > humanScore) {
+    console.log("you lost!")
+}
+else {
+    console.log("you win!")
+}
+}
+playGame();
